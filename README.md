@@ -1,2 +1,2 @@
-# praivasi
+# praivasi™
 praivasi.com
