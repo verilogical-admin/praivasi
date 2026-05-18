@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete directory of digital privacy tools including VPNs, password managers, encryption software, and secure messaging apps. Detailed reviews and comparisons to help you choose the right privacy solutions." />
+  <meta name="keywords" content="privacy tools directory, VPN reviews, password manager comparison, encryption tools, secure messaging, digital privacy solutions, cybersecurity tools, online security" />
+  <meta name="author" content="Praivasi" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Digital Privacy Tools Directory - VPNs, Password Managers & More" />
+  <meta property="og:description" content="Comprehensive directory of privacy tools with detailed reviews. Find the best VPNs, password managers, encryption software, and secure messaging apps." />
+  <meta property="og:url" content="https://praivasi.com/tools.html" />
+  <meta property="og:site_name" content="Praivasi" />
+  <meta property="og:image" content="https://praivasi.com/og-image.jpg" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Digital Privacy Tools Directory" />
+  <meta name="twitter:description" content="Find the best VPNs, password managers, encryption tools, and secure messaging apps." />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://praivasi.com/tools.html" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Digital Privacy Tools Directory",
+    "description": "Comprehensive directory of digital privacy tools including VPNs, password managers, encryption software, and secure messaging apps",
+    "url": "https://praivasi.com/tools.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://praivasi.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://praivasi.com/tools.html"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best VPN for privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best VPN depends on your needs. ProtonVPN offers free options with unlimited bandwidth, ExpressVPN provides excellent speed and reliability, NordVPN offers advanced features like double encryption, and Mullvad emphasizes anonymity without account requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which password manager is most secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Top secure password managers include Bitwarden (open-source, self-hostable), 1Password (excellent UX and security), KeePass (free, local storage), and LastPass (widely used). Choose based on your need for convenience vs. control."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What encryption tool should I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For full disk encryption, use VeraCrypt. For cloud storage, try ProtonDrive or Tresorit. For file encryption, GPG/PGP is open-source and free. Choose based on whether you need local or cloud-based encryption."
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <title>Digital Privacy Tools Directory | VPNs, Password Managers, Encryption & More</title>
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-2: #14b8a6;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(20,184,166,0.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(37,99,235,0.12), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      font-size: 1.35rem;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: var(--text);
+      color: white;
+      font-weight: 650;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+    }
+
+    main {
+      min-height: calc(100vh - 200px);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 60px 0;
+      background: linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(20,184,166,0.05) 100%);
+    }
+
+    .page-header h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.06em;
+    }
+
+    .page-header p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    h2 {
+      margin: 0 0 30px;
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      color: var(--text);
+    }
+
+    h3 {
+      margin: 0 0 20px;
+      font-size: 1.5rem;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    h4 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .tool-category {
+      margin-bottom: 50px;
+    }
+
+    .tool-category:not(:first-child) {
+      padding-top: 40px;
+      border-top: 2px solid var(--line);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
+      border-color: var(--accent);
+    }
+
+    .tool-card h4 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .tool-card p {
+      color: var(--muted);
+      margin: 0 0 16px;
+      font-size: 0.95rem;
+    }
+
+    .tool-features {
+      background: rgba(37, 99, 235, 0.02);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .tool-features ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .tool-features li {
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .tool-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-2);
+      font-weight: bold;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .rating-stars {
+      color: #fbbf24;
+      font-size: 0.9rem;
+    }
+
+    .rating-text {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .comparison-table thead {
+      background: rgba(37, 99, 235, 0.05);
+      font-weight: 600;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .comparison-table th {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .comparison-table td {
+      color: var(--muted);
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .badge.free {
+      background: rgba(52, 168, 83, 0.1);
+      color: #22c55e;
+    }
+
+    .badge.premium {
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--accent);
+    }
+
+    .badge.opensource {
+      background: rgba(168, 85, 247, 0.1);
+      color: #a855f7;
+    }
+
+    .comparison-wrapper {
+      overflow-x: auto;
+      border-radius: 12px;
+    }
+
+    .guide-section {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 36px;
+      margin: 40px 0;
+    }
+
+    .guide-section h3 {
+      margin-top: 0;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding: 12px;
+      padding-left: 32px;
+      position: relative;
+      color: var(--muted);
+      margin-bottom: 8px;
+      background: rgba(37, 99, 235, 0.02);
+      border-radius: 6px;
+    }
+
+    .checklist li:before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--accent-2);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: white;
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta-banner h2 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 0 24px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .breadcrumb {
+      padding: 16px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--text);
+    }
+
+    footer {
+      padding: 36px 0 48px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-table {
+        font-size: 0.85rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 12px 8px;
+      }
+
+      .cta-banner {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" title="Praivasi - Digital Privacy Tools">
+        <span class="mark">p</span>
+        <span>praivasi</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/" title="Home">Home</a>
+        <a href="/tools.html" class="active" title="Privacy tools directory">Tools</a>
+        <a href="/knowledge/" title="Privacy knowledge and guides">Knowledge</a>
+        <a href="/about.html" title="About Praivasi">About</a>
+      </nav>
+      <a class="button" href="mailto:support@praivasi.com" title="Contact Praivasi">Contact</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Digital Privacy Tools Directory</h1>
+        <p>Comprehensive reviews and comparisons of VPNs, password managers, encryption tools, and secure messaging apps to help you build your privacy toolkit.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="/">Home</a> / <span>Tools Directory</span>
+        </div>
+
+        <!-- VPNs Section -->
+        <div class="tool-category">
+          <h2>🔐 Virtual Private Networks (VPNs)</h2>
+          <p>A VPN encrypts your internet traffic and masks your IP address, protecting your online activity from ISPs, hackers, and surveillance. Essential for public Wi-Fi security and privacy.</p>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>ExpressVPN</h4>
+              <span class="badge premium">Premium</span>
+              <p>Industry-leading VPN with 94+ countries coverage, fast speeds, and military-grade encryption.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>3,000+ servers globally</li>
+                  <li>256-bit encryption</li>
+                  <li>No-logs policy verified</li>
+                  <li>24/7 live chat support</li>
+                  <li>30-day money-back guarantee</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.8/5 - 15,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>NordVPN</h4>
+              <span class="badge premium">Premium</span>
+              <p>Feature-rich VPN with double encryption, CyberSec protection, and advanced security options.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>5,600+ servers in 60 countries</li>
+                  <li>Double VPN encryption</li>
+                  <li>CyberSec ad blocker</li>
+                  <li>Dedicated IP options</li>
+                  <li>Multi-hop routing available</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.7/5 - 25,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>ProtonVPN</h4>
+              <span class="badge free">Free Tier</span>
+              <span class="badge premium">Premium</span>
+              <p>Privacy-focused VPN from Proton creators with free tier and unlimited bandwidth.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Free tier with unlimited bandwidth</li>
+                  <li>2,600+ servers globally</li>
+                  <li>Swiss privacy laws protection</li>
+                  <li>No tracking or ads</li>
+                  <li>Secure Core architecture</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.6/5 - 12,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>Mullvad VPN</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Open-source VPN emphasizing anonymity without account requirements or login needed.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>100% free, no paid tier</li>
+                  <li>Open-source code</li>
+                  <li>No account required</li>
+                  <li>400+ servers worldwide</li>
+                  <li>Transparent privacy practices</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.7/5 - 8,000+ reviews</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- VPN Comparison Table -->
+          <div class="comparison-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>VPN</th>
+                  <th>Price</th>
+                  <th>Servers</th>
+                  <th>Countries</th>
+                  <th>Encryption</th>
+                  <th>Logging</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ExpressVPN</strong></td>
+                  <td>$6.67-12.95/mo</td>
+                  <td>3,000+</td>
+                  <td>94</td>
+                  <td>AES-256</td>
+                  <td>No-logs verified</td>
+                </tr>
+                <tr>
+                  <td><strong>NordVPN</strong></td>
+                  <td>$3.99-11.99/mo</td>
+                  <td>5,600+</td>
+                  <td>60</td>
+                  <td>AES-256</td>
+                  <td>No-logs verified</td>
+                </tr>
+                <tr>
+                  <td><strong>ProtonVPN</strong></td>
+                  <td>Free / $5.99-10.99/mo</td>
+                  <td>2,600+</td>
+                  <td>70+</td>
+                  <td>AES-256</td>
+                  <td>No-logs verified</td>
+                </tr>
+                <tr>
+                  <td><strong>Mullvad</strong></td>
+                  <td>$5.52/mo</td>
+                  <td>400+</td>
+                  <td>40+</td>
+                  <td>ChaCha20</td>
+                  <td>No-logs verified</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Password Managers Section -->
+        <div class="tool-category">
+          <h2>🔑 Password Managers</h2>
+          <p>A password manager securely stores and encrypts all your passwords, allowing you to use unique, strong passwords for every account. Critical for preventing credential breaches.</p>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>Bitwarden</h4>
+              <span class="badge free">Free</span>
+              <span class="badge premium">Premium</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Open-source password manager with self-hosting options and affordable pricing for advanced features.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Free tier with all basic features</li>
+                  <li>Open-source code</li>
+                  <li>Self-hosting available</li>
+                  <li>Zero-knowledge encryption</li>
+                  <li>Biometric login support</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.8/5 - 10,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>1Password</h4>
+              <span class="badge premium">Premium</span>
+              <p>Premium password manager with excellent user experience, family plans, and emergency access.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Excellent user interface</li>
+                  <li>Family sharing options</li>
+                  <li>Emergency access feature</li>
+                  <li>Travel mode for security</li>
+                  <li>Business account options</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.8/5 - 18,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>KeePass</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Free, open-source password manager offering complete local control over your password database.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Completely free</li>
+                  <li>Open-source code</li>
+                  <li>Local storage only</li>
+                  <li>No cloud sync</li>
+                  <li>Portable version available</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.5/5 - 8,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>LastPass</h4>
+              <span class="badge free">Free</span>
+              <span class="badge premium">Premium</span>
+              <p>Widely-used password manager with convenient browser extensions, form filling, and identity protection.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Free tier available</li>
+                  <li>Browser extensions</li>
+                  <li>Identity protection features</li>
+                  <li>Secure sharing options</li>
+                  <li>Multi-device sync</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.4/5 - 20,000+ reviews</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Password Manager Comparison Table -->
+          <div class="comparison-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Manager</th>
+                  <th>Price</th>
+                  <th>Encryption</th>
+                  <th>Cloud Sync</th>
+                  <th>2FA Support</th>
+                  <th>Open Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Bitwarden</strong></td>
+                  <td>Free / $10/year</td>
+                  <td>AES-256</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td><strong>1Password</strong></td>
+                  <td>$2.99-4.99/mo</td>
+                  <td>AES-256</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td><strong>KeePass</strong></td>
+                  <td>Free</td>
+                  <td>AES-256</td>
+                  <td>No</td>
+                  <td>Limited</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td><strong>LastPass</strong></td>
+                  <td>Free / $3/mo</td>
+                  <td>AES-256</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Encryption Tools Section -->
+        <div class="tool-category">
+          <h2>🔒 Encryption & Data Protection Tools</h2>
+          <p>Encryption tools protect sensitive files and data. Choose based on your needs: full disk encryption, file encryption, cloud storage encryption, or email encryption.</p>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>VeraCrypt</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Free disk encryption software with strong AES encryption for Windows, macOS, and Linux.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Full disk encryption</li>
+                  <li>AES-256 encryption</li>
+                  <li>Portable containers</li>
+                  <li>Hidden volumes</li>
+                  <li>Cross-platform support</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.9/5 - 5,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>ProtonDrive</h4>
+              <span class="badge premium">Premium</span>
+              <p>End-to-end encrypted cloud storage from Proton with client-side encryption for privacy.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>End-to-end encryption</li>
+                  <li>5GB free storage</li>
+                  <li>File sharing with passwords</li>
+                  <li>Swiss jurisdiction</li>
+                  <li>Seamless integration</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.6/5 - 3,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>Tresorit</h4>
+              <span class="badge premium">Premium</span>
+              <p>Zero-knowledge cloud storage with military-grade encryption and seamless file synchronization.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Zero-knowledge encryption</li>
+                  <li>Military-grade security</li>
+                  <li>Swiss storage servers</li>
+                  <li>Link encryption</li>
+                  <li>Version history</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.7/5 - 2,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>GPG/PGP</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Free, open-source encryption standard for securing emails and files with public-key cryptography.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Email encryption</li>
+                  <li>File encryption</li>
+                  <li>Public-key cryptography</li>
+                  <li>Free and open-source</li>
+                  <li>Industry standard</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.4/5 - 4,000+ reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secure Messaging Section -->
+        <div class="tool-category">
+          <h2>💬 Secure Messaging & Communication</h2>
+          <p>End-to-end encrypted messaging ensures your conversations remain private and cannot be intercepted by third parties.</p>
+
+          <div class="tools-grid">
+            <div class="tool-card">
+              <h4>Signal</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Open-source messaging app with strong encryption, minimal data collection, and excellent usability.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>End-to-end encryption by default</li>
+                  <li>Disappearing messages</li>
+                  <li>Voice and video calls</li>
+                  <li>Group messaging</li>
+                  <li>Minimal metadata collection</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.8/5 - 50,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>Wire</h4>
+              <span class="badge free">Free</span>
+              <span class="badge premium">Premium</span>
+              <p>End-to-end encrypted messaging with team collaboration, disappearing messages, and privacy-first design.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>End-to-end encryption</li>
+                  <li>Team collaboration</li>
+                  <li>Disappearing messages</li>
+                  <li>Screen sharing</li>
+                  <li>Self-destructing media</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.5/5 - 8,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>Briar</h4>
+              <span class="badge free">Free</span>
+              <span class="badge opensource">Open Source</span>
+              <p>Messaging app working over Tor and Bluetooth without internet, designed for activism and privacy.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>Works over Tor network</li>
+                  <li>Bluetooth messaging</li>
+                  <li>No internet required</li>
+                  <li>Private blog feature</li>
+                  <li>Open-source code</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-text">4.4/5 - 2,000+ reviews</span>
+              </div>
+            </div>
+
+            <div class="tool-card">
+              <h4>ProtonMail</h4>
+              <span class="badge free">Free</span>
+              <span class="badge premium">Premium</span>
+              <p>End-to-end encrypted email service with optional password-protected emails for everyone.</p>
+              <div class="tool-features">
+                <ul>
+                  <li>End-to-end encrypted email</li>
+                  <li>Password-protected emails</li>
+                  <li>Disappearing emails</li>
+                  <li>Swiss jurisdiction</li>
+                  <li>Custom domain support</li>
+                </ul>
+              </div>
+              <div class="rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-text">4.7/5 - 12,000+ reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Building Your Privacy Toolkit -->
+        <div class="guide-section">
+          <h3>🛡️ Build Your Personal Privacy Toolkit</h3>
+          <p>The best privacy toolkit is one you'll actually use. Start with essentials and add tools based on your needs:</p>
+          
+          <h4>Essential Tools (Start Here)</h4>
+          <ul class="checklist">
+            <li><strong>Password Manager:</strong> Choose one like Bitwarden, 1Password, or KeePass for unique strong passwords</li>
+            <li><strong>VPN:</strong> Use for public Wi-Fi and to hide your IP from ISPs</li>
+            <li><strong>Encrypted Messaging:</strong> Signal for daily messaging with friends and colleagues</li>
+          </ul>
+
+          <h4>Advanced Tools (Add When Ready)</h4>
+          <ul class="checklist">
+            <li><strong>Disk Encryption:</strong> VeraCrypt for full disk encryption of sensitive files</li>
+            <li><strong>Cloud Encryption:</strong> ProtonDrive or Tresorit for encrypted cloud backup</li>
+            <li><strong>Email Encryption:</strong> ProtonMail for sensitive business communications</li>
+            <li><strong>File Encryption:</strong> GPG/PGP for sharing encrypted files</li>
+          </ul>
+
+          <h4>Best Practices</h4>
+          <ul class="checklist">
+            <li>Enable two-factor authentication (2FA) on all important accounts</li>
+            <li>Use unique passwords generated by your password manager</li>
+            <li>Keep all software and operating systems updated</li>
+            <li>Be cautious of phishing emails and suspicious links</li>
+            <li>Review app permissions and disable unnecessary ones</li>
+          </ul>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+          <h2>Ready to improve your digital privacy?</h2>
+          <p>Start with one tool from our directory. We recommend beginning with a password manager and a VPN, then adding encryption tools as needed.</p>
+          <a href="/" class="button" style="background: white; color: var(--accent);" title="Return to home">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <span>&copy; 2026 Praivasi. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/" title="Home">Home</a>
+          <a href="/tools.html" title="Tools directory">Tools</a>
+          <a href="/knowledge/" title="Knowledge base">Knowledge</a>
+          <a href="/about.html" title="About Praivasi">About</a>
+          <a href="mailto:support@praivasi.com" title="Contact support">Support</a>
+          <a href="#privacy" title="Privacy policy">Privacy Policy</a>
+          <a href="#terms" title="Terms of service">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
