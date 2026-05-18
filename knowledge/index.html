@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy knowledge base and guides. Learn practical privacy habits, best practices for digital security, AI safety, and how to use privacy tools effectively. Educational resources for individuals and teams." />
+  <meta name="keywords" content="privacy guides, digital security, privacy education, best practices, password security, 2FA, encryption, privacy habits, online safety, cybersecurity learning" />
+  <meta name="author" content="Praivasi" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Knowledge Base - Learn Digital Security Best Practices" />
+  <meta property="og:description" content="Learn practical privacy habits, digital security best practices, and how to protect your information online. Comprehensive guides for everyone." />
+  <meta property="og:url" content="https://praivasi.com/knowledge/" />
+  <meta property="og:site_name" content="Praivasi" />
+  <meta property="og:image" content="https://praivasi.com/og-image.jpg" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Knowledge Base - Digital Security Guides" />
+  <meta name="twitter:description" content="Learn privacy best practices and digital security habits from Praivasi's knowledge base." />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://praivasi.com/knowledge/" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Privacy Knowledge Base",
+    "description": "Educational guides and resources for digital privacy and security",
+    "url": "https://praivasi.com/knowledge/"
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://praivasi.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Knowledge",
+        "item": "https://praivasi.com/knowledge/"
+      }
+    ]
+  }
+  </script>
+  
+  <title>Privacy Knowledge Base - Digital Security Guides & Best Practices | Praivasi</title>
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-2: #14b8a6;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(20,184,166,0.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(37,99,235,0.12), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      font-size: 1.35rem;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: var(--text);
+      color: white;
+      font-weight: 650;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+    }
+
+    main {
+      min-height: calc(100vh - 200px);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 60px 0;
+      background: linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(20,184,166,0.05) 100%);
+    }
+
+    .page-header h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.06em;
+    }
+
+    .page-header p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    h2 {
+      margin: 0 0 30px;
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+      color: var(--text);
+    }
+
+    h3 {
+      margin: 0 0 20px;
+      font-size: 1.5rem;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+    }
+
+    h4 {
+      margin: 20px 0 12px;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .guide-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+
+    .guide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.15);
+      border-color: var(--accent);
+    }
+
+    .guide-card h4 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-top: 0;
+    }
+
+    .guide-card p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .guide-card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .guide-card a:hover {
+      color: var(--text);
+    }
+
+    .guide-section {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 36px;
+      margin: 40px 0;
+    }
+
+    .guide-section h3 {
+      margin-top: 0;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    .checklist li {
+      padding: 12px;
+      padding-left: 32px;
+      position: relative;
+      color: var(--muted);
+      margin-bottom: 8px;
+      background: rgba(37, 99, 235, 0.02);
+      border-radius: 6px;
+    }
+
+    .checklist li:before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--accent-2);
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .step-box {
+      background: rgba(37, 99, 235, 0.05);
+      border-left: 4px solid var(--accent);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .step-box h5 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .step-box p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .breadcrumb {
+      padding: 16px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--text);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(20,184,166,0.1) 100%);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 30px 0;
+    }
+
+    .highlight-box h4 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 2px solid var(--line);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      padding: 12px 20px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .tab-button:hover {
+      color: var(--accent);
+    }
+
+    .tab-button.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    footer {
+      padding: 36px 0 48px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .tabs {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" title="Praivasi - Digital Privacy Tools">
+        <span class="mark">p</span>
+        <span>praivasi</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/" title="Home">Home</a>
+        <a href="/tools.html" title="Privacy tools directory">Tools</a>
+        <a href="/knowledge/" class="active" title="Privacy knowledge base">Knowledge</a>
+        <a href="/about.html" title="About Praivasi">About</a>
+      </nav>
+      <a class="button" href="mailto:support@praivasi.com" title="Contact Praivasi">Contact</a>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Privacy Knowledge Base</h1>
+        <p>Learn practical privacy habits, digital security best practices, and how to protect your information in the AI age. Educational guides for everyone.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="/">Home</a> / <span>Knowledge Base</span>
+        </div>
+
+        <!-- Featured Guides -->
+        <h2>Featured Guides</h2>
+        <div class="guide-grid">
+          <div class="guide-card">
+            <h4>🔐 Password Security Essentials</h4>
+            <p>Learn how to create strong passwords, use password managers effectively, and protect your credentials from theft.</p>
+            <a href="#password-guide">Read Guide →</a>
+          </div>
+
+          <div class="guide-card">
+            <h4>🤖 AI Privacy & Safety</h4>
+            <p>Understand privacy risks when using AI tools like ChatGPT, and how to share information safely.</p>
+            <a href="#ai-guide">Read Guide →</a>
+          </div>
+
+          <div class="guide-card">
+            <h4>🛡️ Two-Factor Authentication (2FA)</h4>
+            <p>Master 2FA setup and use it to significantly improve your account security.</p>
+            <a href="#2fa-guide">Read Guide →</a>
+          </div>
+
+          <div class="guide-card">
+            <h4>💬 Secure Communication</h4>
+            <p>Protect your conversations using encrypted messaging and email encryption techniques.</p>
+            <a href="#secure-messaging">Read Guide →</a>
+          </div>
+
+          <div class="guide-card">
+            <h4>📱 Mobile Device Security</h4>
+            <p>Essential security practices for smartphones, tablets, and mobile apps.</p>
+            <a href="#mobile-guide">Read Guide →</a>
+          </div>
+
+          <div class="guide-card">
+            <h4>🌐 Public Wi-Fi Safety</h4>
+            <p>How to safely use public Wi-Fi networks with VPNs and other protective measures.</p>
+            <a href="#wifi-guide">Read Guide →</a>
+          </div>
+        </div>
+
+        <!-- Password Security Guide -->
+        <div class="guide-section" id="password-guide">
+          <h3>🔐 Password Security Essentials</h3>
+          <p>Your passwords are the keys to your digital life. Protecting them is critical for account security.</p>
+
+          <h4>Why Strong Passwords Matter</h4>
+          <p>Weak passwords are one of the most common reasons for account compromise. A strong password can withstand brute-force attacks that try millions of combinations.</p>
+
+          <h4>Creating Strong Passwords</h4>
+          <div class="step-box">
+            <h5>Step 1: Use a Password Manager</h5>
+            <p>Let your password manager generate random, strong passwords. Don't rely on your memory - password managers like Bitwarden, 1Password, or KeePass create complex passwords automatically.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Step 2: Make Them Long and Complex</h5>
+            <p>Aim for 12+ characters with a mix of uppercase, lowercase, numbers, and symbols. A 16-character random password is significantly stronger than an 8-character one.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Step 3: Use Unique Passwords</h5>
+            <p>Never reuse passwords across sites. If one service is breached, attackers will try that password on other platforms. Unique passwords per site prevents this.</p>
+          </div>
+
+          <h4>Password Best Practices</h4>
+          <ul class="checklist">
+            <li>Use a password manager to generate and store strong passwords</li>
+            <li>Never write passwords down on paper or sticky notes</li>
+            <li>Don't share passwords via email or text</li>
+            <li>Change passwords immediately after any breach</li>
+            <li>Use passphrases (4-5 random words) if you must remember a password</li>
+            <li>Enable two-factor authentication alongside strong passwords</li>
+            <li>Avoid personal information in passwords (names, birthdays, pet names)</li>
+            <li>Check for compromised passwords using "Have I Been Pwned"</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>💡 Pro Tip</h4>
+            <p>A password manager is the single best investment for password security. It removes the burden of remembering complex passwords while ensuring each account has a unique, strong password.</p>
+          </div>
+        </div>
+
+        <!-- AI Privacy Guide -->
+        <div class="guide-section" id="ai-guide">
+          <h3>🤖 AI Privacy & Safety Guide</h3>
+          <p>AI tools like ChatGPT, Claude, and Gemini are powerful but require careful use to protect your information.</p>
+
+          <h4>Privacy Risks with AI Tools</h4>
+          <p>When you share information with AI tools, you should assume:</p>
+          <ul class="checklist">
+            <li>Data may be stored for service improvement</li>
+            <li>Information could be used for training future AI models</li>
+            <li>Your queries might be viewed by company employees</li>
+            <li>Data breaches could expose your information</li>
+            <li>Privacy policies can change</li>
+          </ul>
+
+          <h4>What NOT to Share with AI Tools</h4>
+          <ul class="checklist">
+            <li>Passwords or API keys</li>
+            <li>Credit card or financial information</li>
+            <li>Social Security numbers or ID numbers</li>
+            <li>Personal health or medical information</li>
+            <li>Proprietary or confidential business information</li>
+            <li>Client or customer information</li>
+            <li>Personal contact information of others</li>
+            <li>Legal or financial documents with sensitive data</li>
+          </ul>
+
+          <h4>Safe AI Usage Practices</h4>
+          <div class="step-box">
+            <h5>Before Using AI: Remove Sensitive Data</h5>
+            <p>Before sharing documents or information with AI, use Praivasi or manually remove names, addresses, email addresses, phone numbers, and financial data.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Use Privacy-Focused Services</h5>
+            <p>Some AI services offer stronger privacy. Research privacy policies before choosing a tool. Consider using local AI models that run on your own computer.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Use VPN + AI Tools</h5>
+            <p>Add network-level privacy by using a VPN while accessing AI tools. This hides your IP address and location.</p>
+          </div>
+
+          <h4>Recommended Safe Practices</h4>
+          <ul class="checklist">
+            <li>Use Praivasi to detect and redact sensitive data before sharing</li>
+            <li>Rephrase questions to avoid exposing private details</li>
+            <li>Use privacy-focused AI alternatives for sensitive tasks</li>
+            <li>Enable opt-out of training data features when available</li>
+            <li>Keep AI conversations separate from sensitive business</li>
+            <li>Review AI tool privacy policies before use</li>
+            <li>Use a VPN while accessing AI services</li>
+            <li>Don't rely on AI for handling truly confidential information</li>
+          </ul>
+        </div>
+
+        <!-- 2FA Guide -->
+        <div class="guide-section" id="2fa-guide">
+          <h3>🛡️ Two-Factor Authentication (2FA) Setup Guide</h3>
+          <p>Two-factor authentication (2FA) adds a second layer of security to your accounts. Even if your password is compromised, 2FA prevents unauthorized access.</p>
+
+          <h4>What is 2FA?</h4>
+          <p>2FA requires two forms of identification:</p>
+          <ol style="color: var(--muted);">
+            <li><strong>Something you know:</strong> Your password</li>
+            <li><strong>Something you have:</strong> Your phone, security key, or authenticator app</li>
+          </ol>
+
+          <h4>Types of 2FA</h4>
+          <div class="step-box">
+            <h5>SMS Text Messages</h5>
+            <p>Codes sent via text. Easy but less secure than other methods. Better than nothing.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Authenticator Apps</h5>
+            <p>Apps like Google Authenticator, Authy, or Microsoft Authenticator generate codes. More secure than SMS.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Security Keys</h5>
+            <p>Physical devices like YubiKey. Most secure option, no codes needed, works via USB or NFC.</p>
+          </div>
+
+          <h4>How to Enable 2FA</h4>
+          <ul class="checklist">
+            <li>Go to account security settings on the service</li>
+            <li>Look for "Two-Factor Authentication" or "2FA" option</li>
+            <li>Choose your preferred 2FA method (app authenticator recommended)</li>
+            <li>Scan the QR code with your authenticator app</li>
+            <li>Save backup codes in a secure location</li>
+            <li>Test 2FA by logging out and logging back in</li>
+          </ul>
+
+          <h4>Priority Services for 2FA</h4>
+          <p>Enable 2FA on these critical accounts first:</p>
+          <ul class="checklist">
+            <li>Email account (most critical - backup for other accounts)</li>
+            <li>Password manager</li>
+            <li>Financial/banking accounts</li>
+            <li>Cloud storage (Google Drive, OneDrive)</li>
+            <li>Social media accounts</li>
+            <li>Work accounts</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>⚠️ Backup Codes</h4>
+            <p>Always save the backup codes when setting up 2FA. Store them securely in your password manager or encrypted cloud storage. Without them, you may be locked out if you lose access to your 2FA device.</p>
+          </div>
+        </div>
+
+        <!-- Secure Messaging Guide -->
+        <div class="guide-section" id="secure-messaging">
+          <h3>💬 Secure Communication Guide</h3>
+          <p>Learn how to have private conversations using encrypted messaging and email.</p>
+
+          <h4>Encrypted Messaging Apps</h4>
+          <p>Use these apps for private conversations:</p>
+          <ul class="checklist">
+            <li><strong>Signal:</strong> Best for general messaging, calls, and groups</li>
+            <li><strong>ProtonMail:</strong> For encrypted email with non-technical users</li>
+            <li><strong>Wire:</strong> Good for team collaboration with encryption</li>
+            <li><strong>Briar:</strong> For maximum privacy, works over Tor and offline</li>
+          </ul>
+
+          <h4>Email Encryption Basics</h4>
+          <div class="step-box">
+            <h5>Option 1: Encrypted Email Services</h5>
+            <p>Use ProtonMail or Tutanota. Emails are encrypted by default, and you can send encrypted messages to non-users via password-protected links.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Option 2: GPG/PGP Encryption</h5>
+            <p>For advanced users: Use GPG to encrypt emails in your existing email provider. Requires recipient to also understand GPG.</p>
+          </div>
+
+          <h4>Best Practices</h4>
+          <ul class="checklist">
+            <li>Use end-to-end encrypted messaging for sensitive conversations</li>
+            <li>Verify contacts by comparing usernames or fingerprints</li>
+            <li>Enable disappearing messages for temporary conversations</li>
+            <li>Never share sensitive information in unencrypted messages</li>
+            <li>Avoid SMS for sensitive information (use encrypted apps instead)</li>
+            <li>Check that encryption is enabled before sending sensitive data</li>
+            <li>Use separate accounts for business vs. personal communication</li>
+          </ul>
+        </div>
+
+        <!-- Mobile Security Guide -->
+        <div class="guide-section" id="mobile-guide">
+          <h3>📱 Mobile Device Security</h3>
+          <p>Your smartphone contains sensitive personal information. Protect it with these practices.</p>
+
+          <h4>Essential Mobile Security Steps</h4>
+          <ul class="checklist">
+            <li>Use a strong PIN or biometric lock (fingerprint/face)</li>
+            <li>Enable automatic screen lock (1-2 minutes)</li>
+            <li>Keep OS and apps updated to latest versions</li>
+            <li>Only install apps from official stores (Apple App Store, Google Play)</li>
+            <li>Review app permissions - disable unnecessary ones</li>
+            <li>Use mobile antivirus app (optional but helpful)</li>
+            <li>Enable remote find/wipe features (Find My iPhone, Find My Device)</li>
+            <li>Don't use public Wi-Fi without a VPN</li>
+          </ul>
+
+          <h4>App Permissions to Watch</h4>
+          <div class="step-box">
+            <h5>Camera & Microphone</h5>
+            <p>Only grant to apps that need them. Others don't need access.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Location</h5>
+            <p>Consider setting to "While Using App" instead of "Always" for most apps.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>Contacts & Calendar</h5>
+            <p>Only grant to apps that genuinely need them.</p>
+          </div>
+
+          <h4>Recommended Mobile Apps</h4>
+          <ul class="checklist">
+            <li><strong>Password Manager:</strong> Bitwarden, 1Password, or LastPass</li>
+            <li><strong>VPN:</strong> ProtonVPN, NordVPN, or Mullvad</li>
+            <li><strong>Messaging:</strong> Signal for encrypted messaging</li>
+            <li><strong>Email:</strong> ProtonMail for encrypted email</li>
+            <li><strong>File Encryption:</strong> Encrypted cloud storage app</li>
+          </ul>
+        </div>
+
+        <!-- Public Wi-Fi Guide -->
+        <div class="guide-section" id="wifi-guide">
+          <h3>🌐 Public Wi-Fi Safety Guide</h3>
+          <p>Public Wi-Fi networks (coffee shops, airports, hotels) are convenient but risky. Here's how to stay safe.</p>
+
+          <h4>Risks on Public Wi-Fi</h4>
+          <ul class="checklist">
+            <li>Network traffic can be intercepted and read</li>
+            <li>Fake Wi-Fi networks impersonate legitimate ones</li>
+            <li>Other users on the network can access your files</li>
+            <li>Attackers can intercept passwords and login information</li>
+            <li>Malware can spread across the network</li>
+          </ul>
+
+          <h4>How to Stay Safe on Public Wi-Fi</h4>
+          <div class="step-box">
+            <h5>1. Always Use a VPN</h5>
+            <p>Connect to a VPN before joining public Wi-Fi. The VPN encrypts all your traffic, protecting it from snoopers.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>2. Enable Two-Factor Authentication</h5>
+            <p>2FA protects accounts even if a password is captured on public Wi-Fi.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>3. Verify the Network Name</h5>
+            <p>Confirm the Wi-Fi name with staff. Attackers create fake networks with similar names.</p>
+          </div>
+
+          <div class="step-box">
+            <h5>4. Avoid Sensitive Transactions</h5>
+            <p>Don't access banking, sensitive email, or make purchases on public Wi-Fi without a VPN.</p>
+          </div>
+
+          <h4>What NOT to Do on Public Wi-Fi</h4>
+          <ul class="checklist">
+            <li>Don't access banking sites without VPN protection</li>
+            <li>Don't enter credit card information</li>
+            <li>Don't log into sensitive accounts</li>
+            <li>Don't turn off security features or firewalls</li>
+            <li>Don't enable file sharing</li>
+            <li>Don't ignore security warnings from your browser</li>
+            <li>Don't browse without HTTPS (look for 🔒 in URL bar)</li>
+          </ul>
+
+          <h4>Safe Activities on Public Wi-Fi</h4>
+          <ul class="checklist">
+            <li>Browsing news websites</li>
+            <li>Using social media (with VPN)</li>
+            <li>Reading emails (with VPN, especially encrypted mail)</li>
+            <li>Using messaging apps with encryption enabled</li>
+            <li>Video streaming</li>
+            <li>General web searches</li>
+          </ul>
+        </div>
+
+        <!-- General Best Practices -->
+        <div class="guide-section">
+          <h3>📋 General Privacy Best Practices</h3>
+          
+          <h4>Daily Privacy Habits</h4>
+          <ul class="checklist">
+            <li>Review app permissions monthly and disable unnecessary access</li>
+            <li>Clear browser cookies and history regularly</li>
+            <li>Check online accounts for suspicious login activity</li>
+            <li>Be suspicious of unsolicited emails and links</li>
+            <li>Use strong, unique passwords for each account</li>
+            <li>Keep all software and OS updated to latest versions</li>
+            <li>Monitor credit reports for fraud</li>
+            <li>Use encrypted messaging for sensitive conversations</li>
+          </ul>
+
+          <h4>Monthly Privacy Checks</h4>
+          <ul class="checklist">
+            <li>Review recent login activity on important accounts</li>
+            <li>Check password manager for weak or compromised passwords</li>
+            <li>Update passwords for critical accounts (email, banking)</li>
+            <li>Review app permissions on all devices</li>
+            <li>Check "Have I Been Pwned" for your email</li>
+            <li>Review account recovery options are up to date</li>
+            <li>Verify 2FA is still enabled on important accounts</li>
+          </ul>
+
+          <h4>Quarterly Privacy Audit</h4>
+          <ul class="checklist">
+            <li>Review privacy policies of services you use</li>
+            <li>Check data sharing settings in social media accounts</li>
+            <li>Audit cloud storage for sensitive files</li>
+            <li>Review browser extensions and remove unused ones</li>
+            <li>Check location sharing settings</li>
+            <li>Review old accounts you no longer use and delete them</li>
+            <li>Update emergency contacts and recovery options</li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%); color: white; border-radius: 20px; padding: 50px; text-align: center; margin: 60px 0;">
+          <h2 style="color: white;">Ready to improve your privacy?</h2>
+          <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 24px;">Start by reviewing the guides above and implementing one practice at a time. Small steps compound into strong privacy.</p>
+          <a href="/tools.html" class="button" style="background: white; color: var(--accent);">View Privacy Tools →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <span>&copy; 2026 Praivasi. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="/" title="Home">Home</a>
+          <a href="/tools.html" title="Tools directory">Tools</a>
+          <a href="/knowledge/" title="Knowledge base">Knowledge</a>
+          <a href="/about.html" title="About Praivasi">About</a>
+          <a href="mailto:support@praivasi.com" title="Contact support">Support</a>
+          <a href="#privacy" title="Privacy policy">Privacy Policy</a>
+          <a href="#terms" title="Terms of service">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
