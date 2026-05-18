@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praivasi — Digital Privacy Tools & Knowledge</title>
+  <meta name="description" content="Praivasi builds simple digital privacy tools and practical knowledge for the AI age." />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #64748b;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --accent: #2563eb;
+      --accent-2: #14b8a6;
+      --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(20,184,166,0.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(37,99,235,0.12), transparent 34rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: -0.04em;
+      font-size: 1.35rem;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      background: var(--text);
+      color: white;
+      font-weight: 650;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.16);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .hero {
+      padding: 82px 0 72px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.7);
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 26px;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0 auto 22px;
+      font-size: clamp(3rem, 8vw, 6.7rem);
+      line-height: 0.94;
+      letter-spacing: -0.085em;
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
+    }
+
+    .actions {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .panel {
+      margin: 34px auto 0;
+      max-width: 920px;
+      background: rgba(255,255,255,0.74);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(226,232,240,0.9);
+      border-radius: 34px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .product-preview {
+      background: #0f172a;
+      color: white;
+      border-radius: 24px;
+      padding: 26px;
+      text-align: left;
+      min-height: 260px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .preview-top {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+    }
+
+    .privacy-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.82);
+    }
+
+    .tag {
+      color: #67e8f9;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, rgba(37,99,235,0.13), rgba(20,184,166,0.13));
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      font-size: 1.35rem;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .quote {
+      border-radius: 34px;
+      padding: 36px;
+      background: var(--text);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .quote p {
+      margin: 0;
+      font-size: clamp(1.35rem, 3vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.055em;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .list-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--muted);
+    }
+
+    .check {
+      color: var(--accent-2);
+      font-weight: 900;
+    }
+
+    .cta {
+      text-align: center;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 38px;
+      padding: 54px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta p {
+      max-width: 560px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    footer {
+      padding: 36px 0 48px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .product-preview {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="mark">p</span>
+        <span>praivasi</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#tools">Tools</a>
+        <a href="#knowledge">Knowledge</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="button secondary" href="mailto:support@praivasi.com">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">🔐 Digital privacy tools & knowledge</div>
+        <h1>Privacy made simple for the <span class="gradient">AI age.</span></h1>
+        <p>
+          Praivasi helps people and teams protect sensitive information before sharing files,
+          prompts, screenshots, and documents with online tools.
+        </p>
+        <div class="actions">
+          <a class="button" href="mailto:support@praivasi.com">Get in touch</a>
+          <a class="button secondary" href="#tools">Explore the vision</a>
+        </div>
+
+        <div class="panel" aria-label="Praivasi product preview">
+          <div class="product-preview">
+            <div class="preview-top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="privacy-row">
+              <span>Personal details detected in document</span>
+              <span class="tag">Protected</span>
+            </div>
+            <div class="privacy-row">
+              <span>AI prompt checked for sensitive data</span>
+              <span class="tag">Clean</span>
+            </div>
+            <div class="privacy-row">
+              <span>Privacy lesson generated for user</span>
+              <span class="tag">Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Tools that reduce privacy risk before it spreads.</h2>
+          <p>Praivasi is designed around practical, everyday privacy workflows.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon">📄</div>
+            <h3>Document protection</h3>
+            <p>Help users clean PDFs, reports, forms, and screenshots before sending them to apps or AI systems.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🤖</div>
+            <h3>AI-safe sharing</h3>
+            <p>Detect names, addresses, IDs, phone numbers, financial data, and other sensitive details before prompting.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>Simple privacy checks</h3>
+            <p>Turn complex privacy decisions into quick, understandable actions for normal users and small teams.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="knowledge">
+      <div class="container split">
+        <div class="quote">
+          <p>Praivasi exists to make privacy understandable, usable, and available before data leaves your hands.</p>
+        </div>
+
+        <div>
+          <div class="section-heading">
+            <h2>Knowledge, not fear.</h2>
+            <p>Privacy education should be useful, calm, and action-oriented.</p>
+          </div>
+
+          <div class="list">
+            <div class="list-item"><span class="check">✓</span><span>Guides for safer AI, file sharing, and digital identity.</span></div>
+            <div class="list-item"><span class="check">✓</span><span>Plain-English explanations of online privacy risks.</span></div>
+            <div class="list-item"><span class="check">✓</span><span>Practical habits for individuals, founders, freelancers, and teams.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="cta">
+          <h2>Building privacy tools for real people.</h2>
+          <p>
+            For product updates, partnerships, or early access, contact the Praivasi team.
+          </p>
+          <a class="button" href="mailto:support@praivasi.com">support@praivasi.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Praivasi. All rights reserved.</span>
+      <span>Digital Privacy Tools & Knowledge</span>
+    </div>
+  </footer>
+</body>
+</html>
