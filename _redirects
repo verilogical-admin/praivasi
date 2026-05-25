@@ -3,12 +3,6 @@
 /india.html              /india              308
 /knowledge/index.html    /knowledge/         308
 
-/about                  /about.html          200
-/tools                  /tools.html          200
-/india                  /india.html          200
-/knowledge              /knowledge/index.html 200
-/knowledge/             /knowledge/index.html 200
-
 /robots.txt             /robots.txt          200
 /sitemap.xml            /sitemap.xml         200
 /.well-known/security.txt /.well-known/security.txt 200
